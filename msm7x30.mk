@@ -220,6 +220,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Disable atlas services on low-ram targets
 PRODUCT_PROPERTY_OVERRIDES += \
     config.disable_atlas=true
+	
+# twrp.fstab
+PRODUCT_COPY_FILES += \
+	$(COMMON_PATH)/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Disable strict mode
 PRODUCT_PROPERTY_OVERRIDES += \
