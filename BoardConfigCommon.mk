@@ -107,13 +107,9 @@ TARGET_NO_RADIOIMAGE := true
 BLOCK_BASED_OTA := false
 
 # Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),userdebug)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
+WITH_DEXPREOPT := true
+WITH_DEXPREOPT_PIC := true
+WITH_DEXPREOPT_COMP := false
 
 # Use dlmalloc instead of jemalloc
 MALLOC_IMPL := dlmalloc
