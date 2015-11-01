@@ -55,6 +55,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
     $(COMMON_PATH)/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml
+    
+# Swype libs
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
 # Media codecs
 PRODUCT_COPY_FILES += \
