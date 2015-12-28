@@ -26,4 +26,16 @@
     <!-- Use hardware layers in recents -->
     <bool name="config_recents_use_hardware_layers">true</bool>
 
+    <!-- Doze: does this device support STATE_DOZE and STATE_DOZE_SUSPEND?  -->
+    <bool name="doze_display_state_supported">true</bool>
+    
+    <!-- Doze: when to pulse after a buzzworthy notification arrives -->
+    <string name="doze_pulse_schedule" translatable="false">0s,10s,20s,30s</string>
+    
+    <!-- Doze: pulse parameter - delay to wait for the screen to wake up -->
+    <integer name="doze_pulse_delay_in">0</integer>
+     
+    <!-- Doze: pulse parameter - once faded in, how long does it stay visible? -->
+    <integer name="doze_pulse_duration_visible">3500</integer>
+    
 </resources>
