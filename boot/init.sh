@@ -64,13 +64,13 @@ then
     busybox rm -fr /cache/recovery/boot
     # unpack the recovery ramdisk
     busybox cpio -i < /sbin/ramdisk-recovery.cpio
-    # remove boot & recovery partitions from recovery fstab
-    busybox sed -i '/boot/d' /etc/recovery.fstab
-    busybox sed -i '/recovery/d' /etc/recovery.fstab
 else
     busybox echo 'ANDROID BOOT' >>boot.txt
     # unpack the android ramdisk
     busybox cpio -i < /sbin/ramdisk.cpio
+    # remove boot & recovery partitions from fstab
+    busybox sed -i '/boot/d' /fstab.semc
+    busybox sed -i '/recovery/d' /fstab.semc
 fi
 
 # poweroff LED

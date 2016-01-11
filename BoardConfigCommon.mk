@@ -81,11 +81,20 @@ TARGET_NO_SEPARATE_RECOVERY := true
 TARGET_RECOVERY_PRE_COMMAND := "/sbin/pre-recovery.sh"
 TARGET_RELEASETOOLS_EXTENSIONS := device/semc/msm7x30-common
 
-# Recovery
+# TWRP Recovery
+DEVICE_RESOLUTION := 480x854
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_FSTAB := device/semc/msm7x30-common/rootdir/recovery.fstab
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun%d/file"
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_RECOVERY_FSTAB := device/semc/msm7x30-common/rootdir/fstab.semc
 TARGET_RECOVERY_DEVICE_DIRS += device/semc/msm7x30-common
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_INCLUDE_NTFS_3G := true
+TW_HAS_NO_RECOVERY_PARTITION := true
+TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/bq27520
 
 # Kernel
 TARGET_NO_KERNEL := false
@@ -117,15 +126,6 @@ MALLOC_IMPL := dlmalloc
 # Radio
 TARGET_NEEDS_NON_PIE_SUPPORT := true
 BOARD_PROVIDES_LIBRIL := true
-
-# TWRP
-DEVICE_RESOLUTION := 480x854
-TW_INCLUDE_NTFS_3G := true
-TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/bq27520
-RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_REAL_SDCARD := true
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 
 # Boot Animation
 TARGET_BOOTANIMATION_PRELOAD := true
