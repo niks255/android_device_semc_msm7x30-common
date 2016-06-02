@@ -103,6 +103,10 @@ TARGET_NO_RADIOIMAGE := true
 
 PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
 
+# Enable dex-preoptimization to speed up first boot sequence
+WITH_DEXPREOPT := true
+DONT_DEXPREOPT_PREBUILTS := true
+
 # Radio
 BOARD_PROVIDES_LIBRIL := true
 
