@@ -89,6 +89,9 @@ BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/semc/msm7x30-common/recovery/re
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun%d/file"
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 TARGET_RECOVERY_DEVICE_DIRS += device/semc/msm7x30-common
+DEVICE_RESOLUTION := 480x854
+TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/bq27520
+TW_EXCLUDE_SUPERSU := true
 
 # Kernel
 TARGET_NO_KERNEL := false
