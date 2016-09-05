@@ -144,9 +144,8 @@ PRODUCT_PACKAGES += LiveWallpapersPicker
 
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-filter=balanced \
-    dalvik.vm.dex2oat-swap=false \
-    dalvik.vm.image-dex2oat-filter=speed
+    dalvik.vm.dex2oat-filter=interpret-only \
+    dalvik.vm.image-dex2oat-filter=interpret-only
 
 # Google
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -189,7 +188,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # IO Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=bfq
+    sys.io.scheduler=cfq
 
 # For applications to determine if they should turn off specific memory-intensive
 # features that work poorly on low-memory devices.

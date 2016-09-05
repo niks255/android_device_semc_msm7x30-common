@@ -99,25 +99,19 @@ TARGET_USERIMAGES_USE_YAFFS := true
 # Don't generate block mode update zips
 BLOCK_BASED_OTA := false
 
-# Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),userdebug)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
-
 # Use dlmalloc instead of jemalloc
 MALLOC_IMPL := dlmalloc
+
+# Use homogeneous space compaction
+ART_USE_HSPACE_COMPACT := true
 
 # Radio
 TARGET_NEEDS_NON_PIE_SUPPORT := true
 BOARD_PROVIDES_LIBRIL := true
 
 # Boot Animation
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+TARGET_BOOTANIMATION_PRELOAD := false
+TARGET_BOOTANIMATION_TEXTURE_CACHE := false
 
 # Sensors
 SOMC_CFG_SENSORS := true
