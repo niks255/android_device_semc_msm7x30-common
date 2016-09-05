@@ -105,6 +105,9 @@ MALLOC_IMPL := dlmalloc
 # Use homogeneous space compaction
 ART_USE_HSPACE_COMPACT := true
 
+# Use OpenJDK8
+EXPERIMENTAL_USE_JAVA8=true
+
 # Enable dex-preoptimization to speed up first boot sequence
 WITH_DEXPREOPT := true
 WITH_DEXPREOPT_BOOT_IMG_ONLY := true
