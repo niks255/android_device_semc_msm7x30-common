@@ -105,6 +105,10 @@ MALLOC_IMPL := dlmalloc
 # Use homogeneous space compaction
 ART_USE_HSPACE_COMPACT := true
 
+# Enable dex-preoptimization to speed up first boot sequence
+WITH_DEXPREOPT := true
+WITH_DEXPREOPT_BOOT_IMG_ONLY := true
+
 # Radio
 TARGET_NEEDS_NON_PIE_SUPPORT := true
 BOARD_PROVIDES_LIBRIL := true
