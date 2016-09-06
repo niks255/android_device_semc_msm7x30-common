@@ -110,7 +110,8 @@ EXPERIMENTAL_USE_JAVA8=true
 
 # Enable dex-preoptimization to speed up first boot sequence
 WITH_DEXPREOPT := true
-WITH_DEXPREOPT_BOOT_IMG_ONLY := true
+WITH_DEXPREOPT_PIC := true
+DONT_DEXPREOPT_PREBUILTS := true
 
 # Radio
 TARGET_NEEDS_NON_PIE_SUPPORT := true

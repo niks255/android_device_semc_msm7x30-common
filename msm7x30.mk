@@ -143,9 +143,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += LiveWallpapersPicker
 
 # ART
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-filter=interpret-only \
-    dalvik.vm.image-dex2oat-filter=interpret-only
+PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.dex2oat-filter=interpret-only
+PRODUCT_DEX_PREOPT_BOOT_FLAGS := --compiler-filter=speed
+PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := --compiler-filter=interpret-only
 
 # Google
 PRODUCT_PROPERTY_OVERRIDES += \
