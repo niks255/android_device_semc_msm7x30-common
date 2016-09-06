@@ -142,6 +142,16 @@ PRODUCT_PACKAGES += \
 # Live wallpapers picker
 PRODUCT_PACKAGES += LiveWallpapersPicker
 
+# Gapps
+GAPPS_VARIANT := pico
+GAPPS_FORCE_MATCHING_DPI := true
+GAPPS_FORCE_WEBVIEW_OVERRIDES := true
+
+# Swype libs
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+    $(COMMON_PATH)/rootdir/system/lib/libjni_keyboarddecoder.so:system/lib/libjni_keyboarddecoder.so
+
 # ART
 PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.dex2oat-filter=interpret-only
 PRODUCT_DEX_PREOPT_BOOT_FLAGS := --compiler-filter=speed
@@ -215,3 +225,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # proprietary side of the board
 $(call inherit-product, vendor/semc/msm7x30-common/msm7x30-common-vendor.mk)
+$(call inherit-product, vendor/google/build/opengapps-packages.mk)
