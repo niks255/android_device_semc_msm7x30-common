@@ -147,6 +147,10 @@ GAPPS_VARIANT := pico
 GAPPS_FORCE_MATCHING_DPI := true
 GAPPS_FORCE_WEBVIEW_OVERRIDES := true
 
+# twrp.fstab
+PRODUCT_COPY_FILES += \
+	$(COMMON_PATH)/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+
 # Swype libs
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
