@@ -165,7 +165,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
     debug.mdpcomp.maxlayer=3 \
     debug.mdpcomp.idletime=-1 \
-    persist.sys.force_highendgfx=true
+    persist.sys.purgeable_assets=1 \
+    persist.sys.use_16bpp_alpha=1
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number.
@@ -194,7 +195,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # IO Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=bfq
+    sys.io.scheduler=cfq
 
 # Enable repeatable keys in CWM
 PRODUCT_PROPERTY_OVERRIDES += \
