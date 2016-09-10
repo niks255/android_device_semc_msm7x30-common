@@ -48,6 +48,10 @@ PRODUCT_COPY_FILES += \
 
 # fstab
 PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/etc/init.d/11link2sd:/system/etc/init.d/11link2sd
+
+# fstab
+PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/fstab.semc:root/fstab.semc
 
 # Common device specific configs
