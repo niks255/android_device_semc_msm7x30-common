@@ -151,6 +151,11 @@ PRODUCT_PACKAGES += \
 # Live wallpapers picker
 PRODUCT_PACKAGES += LiveWallpapersPicker
 
+# Lineage OS packages
+PRODUCT_PACKAGES += \
+    SoundRecorder \
+    Gello
+
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
     pm.dexopt.install=interpret-only \
