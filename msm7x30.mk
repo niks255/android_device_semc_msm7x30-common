@@ -158,13 +158,11 @@ PRODUCT_PACKAGES += \
 
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
-    pm.dexopt.install=interpret-only \
-    pm.dexopt.bg-dexopt=interpret-only \
-    pm.dexopt.nsys-library=interpret-only \
-    pm.dexopt.shared-apk=interpret-only \
-    pm.dexopt.core-app=interpret-only
-
-PRODUCT_DEX_PREOPT_BOOT_FLAGS := --compiler-filter=balanced
+    pm.dexopt.boot=balanced-profile \
+    pm.dexopt.bg-dexopt=balanced-profile \
+    pm.dexopt.nsys-library=balanced \
+    pm.dexopt.shared-apk=balanced \
+    pm.dexopt.core-app=balanced
 
 # Google
 PRODUCT_PROPERTY_OVERRIDES += \
