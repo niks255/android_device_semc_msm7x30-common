@@ -150,4 +150,9 @@
 
     <!-- Use wakelock for flashlight -->
     <bool name="config_useWakeLockForFlashlight">true</bool>
+    
+    <!-- Default list of files pinned by the Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/priv-app/Dialer/Dialer.apk"</item>
+   </string-array>
 </resources>
