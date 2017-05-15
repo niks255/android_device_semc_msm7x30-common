@@ -50,6 +50,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/fstab.semc:root/fstab.semc
 
+# TWRP (Optional)
+ifeq ($(WITH_TWRP),true)
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+endif
+
 # Common device specific configs
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
